@@ -48,6 +48,7 @@
             margin-top: auto;
             margin-left: auto;
             width: 3.125rem;
+            background-color: #DA0045;
         }
     }
 
