@@ -35,6 +35,7 @@
     gap: 0.5rem;
     aspect-ratio: 1 / 1;
     border: 1px solid #ffffff49;
+    cursor: pointer;
 
     .scene-card_content {
         display: flex;
@@ -49,6 +50,12 @@
             margin-left: auto;
             width: 3.125rem;
             background-color: #DA0045;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            cursor: pointer;
         }
     }
 
