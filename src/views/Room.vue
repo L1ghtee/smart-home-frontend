@@ -39,7 +39,7 @@ import SceneCard from '../components/SceneCard.vue';
 <style lang="scss" scoped>
     .room{
          
-        background-image: url("src/assets/Room_bg.png");
+        background-image: url("/src/assets/Room_bg.png");
         background-size: cover;
         background-position: center;
         width: 100dvw;
