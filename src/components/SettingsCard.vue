@@ -17,6 +17,7 @@
         gap: 0.5rem;
         border-radius: 1.25rem;
         border:1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
         aspect-ratio: 1/1;
         .setting-card_icon{
             max-width: 2.75rem;

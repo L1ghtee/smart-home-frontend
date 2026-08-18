@@ -1,7 +1,9 @@
 <script setup>
+import { ref } from 'vue';
+import Modal from '../components/Modal.vue';
 import SceneCard from '../components/SceneCard.vue';
 import SettingsCard from '../components/SettingsCard.vue';
-
+const showModal = ref(false)
 
 </script>
 
@@ -31,11 +33,14 @@ import SettingsCard from '../components/SettingsCard.vue';
                     <SceneCard/>
                 </div>
                 <div class="settings">
-                    <SettingsCard/>
+                    <SettingsCard  @click="showModal=true"/>
                     <SettingsCard/>
                     <SettingsCard/>
                     <SettingsCard/>
                 </div>
+                <Modal :show="showModal" @close = "showModal= false">
+                    <H1> This is popup</H1>
+                </Modal>
             </div>
         </div>
     </section>
@@ -100,7 +105,7 @@ import SettingsCard from '../components/SettingsCard.vue';
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.25rem;
-        
+
     }
     
 </style>
