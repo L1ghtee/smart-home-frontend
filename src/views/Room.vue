@@ -1,5 +1,6 @@
 <script setup>
 import SceneCard from '../components/SceneCard.vue';
+import SettingsCard from '../components/SettingsCard.vue';
 
 
 </script>
@@ -30,7 +31,10 @@ import SceneCard from '../components/SceneCard.vue';
                     <SceneCard/>
                 </div>
                 <div class="settings">
-
+                    <SettingsCard/>
+                    <SettingsCard/>
+                    <SettingsCard/>
+                    <SettingsCard/>
                 </div>
             </div>
         </div>
@@ -65,7 +69,7 @@ import SceneCard from '../components/SceneCard.vue';
         width: 100%;
         position: relative;
         z-index: 1;
-
+        
     }
     .header{
         width: 100%;
@@ -91,6 +95,12 @@ import SceneCard from '../components/SceneCard.vue';
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
         gap: 1.5rem;
+    }
+    .settings{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+        
     }
     
 </style>
