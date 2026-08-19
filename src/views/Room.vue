@@ -9,14 +9,14 @@ const activeSetting =ref(null)
     {
         id: 1,
         title: "Romantic",
-        bg_image: "/src/assets/card.png",
-        icon:"/src/assets/icon-heart.svg"
+        bg_image: "src/assets/card.png",
+        icon:"src/assets/icon-heart.svg"
     },
      {
         id: 2,
         title: "Sleep",
-        bg_image: "/src/assets/card.png",
-        icon:"/src/assets/icon-heart.svg"
+        bg_image: "src/assets/card.png",
+        icon:"src/assets/icon-heart.svg"
     }
  ])
  const settings = ref([
@@ -24,19 +24,19 @@ const activeSetting =ref(null)
         id: 1,
         type:"light",
         title: "Lighting",
-        icon:"/src/assets/Light.svg"
+        icon:"src/assets/Light.svg"
     },
     { 
         id: 2,
         type:"climate",
         title: "Climate",
-        icon:"/src/assets/Light.svg"
+        icon:"src/assets/Light.svg"
     },
     { 
         id: 3,
         type:"music",
         title: "Music",
-        icon:"/src/assets/Light.svg"
+        icon:"src/assets/Light.svg"
     }
  ])
  const openSetting = (setting) => {
