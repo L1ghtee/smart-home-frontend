@@ -9,7 +9,7 @@ const activeSetting =ref(null)
     {
         id: 1,
         title: "Romantic",
-        bg_image: "/public/images/card.png",
+        bg_image: "/images/card.png",
         icon:"/src/assets/icon-heart.svg"
     },
      {
@@ -24,7 +24,7 @@ const activeSetting =ref(null)
         id: 1,
         type:"light",
         title: "Lighting",
-        icon:"/public/images/Light.svg"
+        icon:"public/images/Light.svg"
     },
     { 
         id: 2,
