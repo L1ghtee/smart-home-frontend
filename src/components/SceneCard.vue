@@ -1,17 +1,21 @@
 <script setup>
-
+    defineProps({
+        title:String,
+        icon:String,
+        background_image: String
+    })
 </script>
 
 <template>
     <div class="scene-card">
         <div class="scene-card_bg">
-            <img src="/src/assets/card.png" alt="" class="bg-image">
+            <img :src="background_image" alt="" class="bg-image">
             <div class="bg-gradient"></div>
         </div>
 
         <div class="scene-card_content">
-            <img src="/src/assets/icon-heart.svg" alt="" class="scene-card_icon">
-            <div class="scene-card_txt">Romantic</div>
+            <img :src="icon" alt="" class="scene-card_icon">
+            <div class="scene-card_txt">{{ title }}</div>
             <button class="scene-card_btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

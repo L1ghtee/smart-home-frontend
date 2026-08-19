@@ -1,10 +1,14 @@
 <script setup>
+defineProps({
+    title: String,
+    icon: String
+})
 </script>
 
 <template>
     <div class="setting-card">
-        <img class="setting-card_icon" src="/src/assets/Light.svg" alt="">
-        <p class="setting-txt">Lightning</p>
+        <img class="setting-card_icon" :src="icon" :alt="title">
+        <p class="setting-txt">{{ title }}</p>
     </div>
 </template>
 
@@ -19,6 +23,7 @@
         border:1px solid rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(5px);
         aspect-ratio: 1/1;
+        cursor: pointer;
         .setting-card_icon{
             max-width: 2.75rem;
         }

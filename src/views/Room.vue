@@ -4,7 +4,50 @@ import Modal from '../components/Modal.vue';
 import SceneCard from '../components/SceneCard.vue';
 import SettingsCard from '../components/SettingsCard.vue';
 const showModal = ref(false)
+const activeSetting =ref(null)
+ const scenes = ref([
+    {
+        id: 1,
+        title: "Romantic",
+        bg_image: "/src/assets/card.png",
+        icon:"/src/assets/icon-heart.svg"
+    },
+     {
+        id: 2,
+        title: "Sleep",
+        bg_image: "/src/assets/card.png",
+        icon:"/src/assets/icon-heart.svg"
+    }
+ ])
+ const settings = ref([
+    { 
+        id: 1,
+        type:"light",
+        title: "Lighting",
+        icon:"/src/assets/Light.svg"
+    },
+    { 
+        id: 2,
+        type:"climate",
+        title: "Climate",
+        icon:"/src/assets/Light.svg"
+    },
+    { 
+        id: 3,
+        type:"music",
+        title: "Music",
+        icon:"/src/assets/Light.svg"
+    }
+ ])
+ const openSetting = (setting) => {
+  activeSetting.value = setting
+  showModal.value = true
+}
 
+const closeSetting = () => {
+  showModal.value = false
+  activeSetting.value = null
+}
 </script>
 
 <template>
@@ -27,19 +70,16 @@ const showModal = ref(false)
                 </div>
 
                 <div class="scenes">
-                    <SceneCard/>
-                    <SceneCard/>
-                    <SceneCard/>
-                    <SceneCard/>
+                    <SceneCard v-for="scene in scenes" :key="scene.id" :title="scene.title" :background_image="scene.bg_image" :icon="scene.icon"/>
+                    
                 </div>
                 <div class="settings">
-                    <SettingsCard  @click="showModal=true"/>
-                    <SettingsCard/>
-                    <SettingsCard/>
-                    <SettingsCard/>
+                    <SettingsCard v-for="setting in settings" :key="setting.id" :title="setting.title" :icon="setting.icon"  @click="openSetting(setting)" />
+                                       
                 </div>
-                <Modal :show="showModal" @close = "showModal= false">
-                    <H1> This is popup</H1>
+                <Modal :show="showModal" @close = "closeSetting">
+                    <H1> {{activeSetting?.title }}</H1>
+                    <p>{{activeSetting?.type}}</p>
                 </Modal>
             </div>
         </div>
