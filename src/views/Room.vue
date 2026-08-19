@@ -10,13 +10,13 @@ const activeSetting =ref(null)
         id: 1,
         title: "Romantic",
         bg_image: "/images/card.png",
-        icon:"/src/assets/icon-heart.svg"
+        icon:"/images/icon-heart.svg"
     },
      {
         id: 2,
         title: "Sleep",
-        bg_image: "/public/images/card.png",
-        icon:"/public/images/icon-heart.svg"
+        bg_image: "/images/card.png",
+        icon:"/images/icon-heart.svg"
     }
  ])
  const settings = ref([
@@ -24,19 +24,19 @@ const activeSetting =ref(null)
         id: 1,
         type:"light",
         title: "Lighting",
-        icon:"public/images/Light.svg"
+        icon:"/images/Light.svg"
     },
     { 
         id: 2,
         type:"climate",
         title: "Climate",
-        icon:"/public/images/Light.svg"
+        icon:"/images/Light.svg"
     },
     { 
         id: 3,
         type:"music",
         title: "Music",
-        icon:"/public/images/Light.svg"
+        icon:"/images/Light.svg"
     }
  ])
  const openSetting = (setting) => {
@@ -56,7 +56,7 @@ const closeSetting = () => {
         <div class="container">
             <div class="content">
                 <div class="logo">
-                    <img src="/public/images/logo.png" alt="Logo" width="48" />
+                    <img src="/images/logo.png" alt="Logo" width="48" />
                 </div>
                 <div class="header">
                     <div class="greatings">
@@ -64,7 +64,7 @@ const closeSetting = () => {
                         <p>Welcome Home!</p>
                     </div>
                     <div class="weather">
-                        <img src="/public/images/weather-cloud.svg" alt="Weather" />
+                        <img src="/images/weather-cloud.svg" alt="Weather" />
                         <p>25°C</p>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ const closeSetting = () => {
 <style lang="scss" scoped>
     .room{
          
-        background-image: url("/public/images/Room_bg.png");
+        background-image: url("/images/Room_bg.png");
         background-size: cover;
         background-position: center;
         width: 100dvw;
